@@ -1,0 +1,13 @@
+[2023-12-01T21:56:05.106+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: example_passing_params_via_test_command.env_var_test_task scheduled__2023-12-01T21:55:00+00:00 [queued]>
+[2023-12-01T21:56:05.146+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: example_passing_params_via_test_command.env_var_test_task scheduled__2023-12-01T21:55:00+00:00 [queued]>
+[2023-12-01T21:56:05.155+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-12-01T21:56:05.194+0000] {taskinstance.py:1382} INFO - Executing <Task(_PythonDecoratedOperator): env_var_test_task> on 2023-12-01 21:55:00+00:00
+[2023-12-01T21:56:05.219+0000] {standard_task_runner.py:57} INFO - Started process 3553 to run task
+[2023-12-01T21:56:05.225+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'example_passing_params_via_test_command', 'env_var_test_task', 'scheduled__2023-12-01T21:55:00+00:00', '--job-id', '1086', '--raw', '--subdir', '/home/***/.local/lib/python3.8/site-packages/***/example_dags/example_passing_params_via_test_command.py', '--cfg-path', '/tmp/tmpaezzbfpu']
+[2023-12-01T21:56:05.242+0000] {standard_task_runner.py:85} INFO - Job 1086: Subtask env_var_test_task
+[2023-12-01T21:56:05.415+0000] {task_command.py:416} INFO - Running <TaskInstance: example_passing_params_via_test_command.env_var_test_task scheduled__2023-12-01T21:55:00+00:00 [running]> on host f0f9935858d2
+[2023-12-01T21:56:05.725+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='example_passing_params_via_test_command' AIRFLOW_CTX_TASK_ID='env_var_test_task' AIRFLOW_CTX_EXECUTION_DATE='2023-12-01T21:55:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2023-12-01T21:55:00+00:00'
+[2023-12-01T21:56:05.731+0000] {python.py:194} INFO - Done. Returned value was: None
+[2023-12-01T21:56:05.750+0000] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=example_passing_params_via_test_command, task_id=env_var_test_task, execution_date=20231201T215500, start_date=20231201T215605, end_date=20231201T215605
+[2023-12-01T21:56:05.828+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2023-12-01T21:56:05.871+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check

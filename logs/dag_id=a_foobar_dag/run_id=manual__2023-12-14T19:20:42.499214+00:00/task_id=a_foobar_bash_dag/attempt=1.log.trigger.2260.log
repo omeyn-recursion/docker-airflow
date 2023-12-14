@@ -1,0 +1,22 @@
+[2023-12-14T19:20:51.131+0000] {foobar_trigger.py:32} INFO - logging no file found, sleeping again
+[2023-12-14T19:20:52.132+0000] {foobar_trigger.py:32} INFO - logging no file found, sleeping again
+[2023-12-14T19:20:53.133+0000] {foobar_trigger.py:32} INFO - logging no file found, sleeping again
+[2023-12-14T19:20:54.134+0000] {foobar_trigger.py:32} INFO - logging no file found, sleeping again
+[2023-12-14T19:20:55.135+0000] {foobar_trigger.py:32} INFO - logging no file found, sleeping again
+[2023-12-14T19:20:56.136+0000] {foobar_trigger.py:32} INFO - logging no file found, sleeping again
+[2023-12-14T19:20:57.139+0000] {foobar_trigger.py:32} INFO - logging no file found, sleeping again
+[2023-12-14T19:20:58.140+0000] {foobar_trigger.py:32} INFO - logging no file found, sleeping again
+[2023-12-14T19:20:59.142+0000] {foobar_trigger.py:32} INFO - logging no file found, sleeping again
+[2023-12-14T19:21:00.143+0000] {foobar_trigger.py:32} INFO - logging no file found, sleeping again
+[2023-12-14T19:21:01.145+0000] {foobar_trigger.py:32} INFO - logging no file found, sleeping again
+[2023-12-14T19:21:02.147+0000] {foobar_trigger.py:32} INFO - logging no file found, sleeping again
+[2023-12-14T19:21:03.149+0000] {foobar_trigger.py:32} INFO - logging no file found, sleeping again
+[2023-12-14T19:21:04.150+0000] {foobar_trigger.py:32} INFO - logging no file found, sleeping again
+[2023-12-14T19:21:05.152+0000] {foobar_trigger.py:32} INFO - logging no file found, sleeping again
+[2023-12-14T19:21:06.154+0000] {foobar_trigger.py:32} INFO - logging no file found, sleeping again
+[2023-12-14T19:21:07.156+0000] {foobar_trigger.py:32} INFO - logging no file found, sleeping again
+[2023-12-14T19:21:08.157+0000] {foobar_trigger.py:32} INFO - logging no file found, sleeping again
+[2023-12-14T19:21:09.158+0000] {foobar_trigger.py:32} INFO - logging no file found, sleeping again
+[2023-12-14T19:21:10.160+0000] {foobar_trigger.py:32} INFO - logging no file found, sleeping again
+[2023-12-14T19:21:11.162+0000] {foobar_trigger.py:32} INFO - logging no file found, sleeping again
+[2023-12-14T19:21:12.155+0000] {triggerer_job_runner.py:607} ERROR - Trigger cancelled; message=

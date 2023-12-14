@@ -1,0 +1,54 @@
+[2023-12-05T20:43:44.251+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: a_foobar_dag.a_foobar_bash_dag manual__2023-12-05T20:43:40.907554+00:00 [queued]>
+[2023-12-05T20:43:44.267+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: a_foobar_dag.a_foobar_bash_dag manual__2023-12-05T20:43:40.907554+00:00 [queued]>
+[2023-12-05T20:43:44.279+0000] {taskinstance.py:1361} INFO - Starting attempt 1 of 1
+[2023-12-05T20:43:44.300+0000] {taskinstance.py:1382} INFO - Executing <Task(FileCheckOperator): a_foobar_bash_dag> on 2023-12-05 20:43:40.907554+00:00
+[2023-12-05T20:43:44.325+0000] {standard_task_runner.py:57} INFO - Started process 73 to run task
+[2023-12-05T20:43:44.329+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'a_foobar_dag', 'a_foobar_bash_dag', 'manual__2023-12-05T20:43:40.907554+00:00', '--job-id', '2225', '--raw', '--subdir', 'DAGS_FOLDER/a_foobar_dag.py', '--cfg-path', '/tmp/tmpq9pjxhpr']
+[2023-12-05T20:43:44.333+0000] {standard_task_runner.py:85} INFO - Job 2225: Subtask a_foobar_bash_dag
+[2023-12-05T20:43:44.384+0000] {task_command.py:416} INFO - Running <TaskInstance: a_foobar_dag.a_foobar_bash_dag manual__2023-12-05T20:43:40.907554+00:00 [running]> on host 434a8ae30006
+[2023-12-05T20:43:44.468+0000] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Airflow' AIRFLOW_CTX_DAG_ID='a_foobar_dag' AIRFLOW_CTX_TASK_ID='a_foobar_bash_dag' AIRFLOW_CTX_EXECUTION_DATE='2023-12-05T20:43:40.907554+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2023-12-05T20:43:40.907554+00:00'
+[2023-12-05T20:43:44.470+0000] {foobar_operator.py:23} INFO - Foobar being executed
+[2023-12-05T20:43:44.478+0000] {taskinstance.py:1526} INFO - Pausing task as DEFERRED. dag_id=a_foobar_dag, task_id=a_foobar_bash_dag, execution_date=20231205T204340, start_date=20231205T204344
+[2023-12-05T20:43:44.502+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 100 (task deferral)
+[2023-12-05T20:43:46.036+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: a_foobar_dag.a_foobar_bash_dag manual__2023-12-05T20:43:40.907554+00:00 [queued]>
+[2023-12-05T20:43:46.048+0000] {taskinstance.py:1159} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: a_foobar_dag.a_foobar_bash_dag manual__2023-12-05T20:43:40.907554+00:00 [queued]>
+[2023-12-05T20:43:46.048+0000] {taskinstance.py:1359} INFO - Resuming after deferral
+[2023-12-05T20:43:46.069+0000] {taskinstance.py:1382} INFO - Executing <Task(FileCheckOperator): a_foobar_bash_dag> on 2023-12-05 20:43:40.907554+00:00
+[2023-12-05T20:43:46.076+0000] {standard_task_runner.py:57} INFO - Started process 76 to run task
+[2023-12-05T20:43:46.081+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'a_foobar_dag', 'a_foobar_bash_dag', 'manual__2023-12-05T20:43:40.907554+00:00', '--job-id', '2226', '--raw', '--subdir', 'DAGS_FOLDER/a_foobar_dag.py', '--cfg-path', '/tmp/tmph0qlgq96']
+[2023-12-05T20:43:46.088+0000] {standard_task_runner.py:85} INFO - Job 2226: Subtask a_foobar_bash_dag
+[2023-12-05T20:43:46.181+0000] {task_command.py:416} INFO - Running <TaskInstance: a_foobar_dag.a_foobar_bash_dag manual__2023-12-05T20:43:40.907554+00:00 [running]> on host 434a8ae30006
+[2023-12-05T20:43:46.327+0000] {baseoperator.py:1600} ERROR - Trigger failed:
+Traceback (most recent call last):
+
+  File "/home/***/.local/lib/python3.8/site-packages/***/utils/module_loading.py", line 35, in import_string
+    module_path, class_name = dotted_path.rsplit(".", 1)
+
+ValueError: not enough values to unpack (expected 2, got 1)
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/home/***/.local/lib/python3.8/site-packages/***/jobs/triggerer_job_runner.py", line 667, in update_triggers
+    trigger_class = self.get_trigger_by_classpath(new_trigger_orm.classpath)
+
+  File "/home/***/.local/lib/python3.8/site-packages/***/jobs/triggerer_job_runner.py", line 707, in get_trigger_by_classpath
+    self.trigger_cache[classpath] = import_string(classpath)
+
+  File "/home/***/.local/lib/python3.8/site-packages/***/utils/module_loading.py", line 37, in import_string
+    raise ImportError(f"{dotted_path} doesn't look like a module path")
+
+ImportError: FileCheckTrigger doesn't look like a module path
+
+[2023-12-05T20:43:46.346+0000] {taskinstance.py:1937} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/baseoperator.py", line 1601, in resume_execution
+    raise TaskDeferralError(next_kwargs.get("error", "Unknown"))
+airflow.exceptions.TaskDeferralError: Trigger failure
+[2023-12-05T20:43:46.354+0000] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=a_foobar_dag, task_id=a_foobar_bash_dag, execution_date=20231205T204340, start_date=20231205T204344, end_date=20231205T204346
+[2023-12-05T20:43:46.389+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 2226 for task a_foobar_bash_dag (Trigger failure; 76)
+[2023-12-05T20:43:46.416+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2023-12-05T20:43:46.437+0000] {taskinstance.py:2778} INFO - 0 downstream tasks scheduled from follow-on schedule check
