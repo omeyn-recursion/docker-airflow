@@ -22,6 +22,7 @@ class FileCheckOperator(BaseOperator):
 
         return True
     
-    def found_file(self, context):
-        print("print line - found file, foobar exiting")
-        self.log.info("Found file. Final method called!")
+    def found_file(self, context, event: Dict[str, Any] = None):
+        self.log.info(f"trigger has yielded back to operator's found_file method.")
+        self.log.info(f"returned context {context}")
+        self.log.info(f"returned event {event}")

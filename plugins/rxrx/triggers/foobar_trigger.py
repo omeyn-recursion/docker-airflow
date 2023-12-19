@@ -23,14 +23,13 @@ class FileCheckTrigger(BaseTrigger):
     async def run(self):
         self.log.info(f"Setting up trigger with path {self.file_path}")
         path = AsyncPath(self.file_path)
-        print("trigger going to sleep")
+        # print("trigger going to sleep")
         while True:
             await asyncio.sleep(self.time_between_pokes)
-            print("trigger awake")
             # very naughty blocking call for sanity checking:
-            self.log.info(f'Currently in /tmp: {os.listdir("/tmp/")}')
+            # self.log.info(f'Currently in /tmp: {os.listdir("/tmp/")}')
             if await path.exists():
                 self.log.info(f"Found file {path}, yielding")
                 yield TriggerEvent(self.file_path)
             else:
-                self.log.info("logging no file found, sleeping again")
+                self.log.info("No file found, sleeping again")
