@@ -3,11 +3,11 @@
 Description=Airflow webserver daemon
 After=syslog.target network.target
 [Service]
-Environment="PATH=/home/oliver/airflow_project/airflow_env/bin:/home/oliver/airflow/:$PATH"
+Environment="PATH=/home/oliver/airflow-/airflow-env/bin:/home/oliver/airflow/:$PATH"
 User=oliver
 Group=oliver
 Type=simple
-ExecStart=/home/oliver/airflow_project/airflow_env/bin/python /home/oliver/airflow_project/airflow_env/bin/airflow webserver
+ExecStart=/home/oliver/airflow-/airflow-env/bin/python /home/oliver/airflow-/airflow-env/bin/airflow webserver
 Restart=on-failure
 RestartSec=5s
 PrivateTmp=true
