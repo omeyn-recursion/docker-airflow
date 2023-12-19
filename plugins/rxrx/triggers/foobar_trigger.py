@@ -30,7 +30,7 @@ class FileCheckTrigger(BaseTrigger):
             # very naughty blocking call for sanity checking:
             self.log.info(f'Currently in /tmp: {os.listdir("/tmp/")}')
             if await path.exists():
-                self.log.info("Single check done, now yielding")
+                self.log.info(f"Found file {path}, yielding")
                 yield TriggerEvent(self.file_path)
             else:
                 self.log.info("logging no file found, sleeping again")
